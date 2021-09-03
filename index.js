@@ -8,9 +8,9 @@ app.listen(3000, function() {
 const mysql = require('mysql');
 
 app.get("/Get", function(req, res, nex) {
+
         if (nex) throw nex;
-        // クエリパラメータ 例
-        // example.com:3000/Get?user=root&password=password&database=database&sql=SELECT%20*%20FROM%20sample
+
         const user = req.query.user;
         const password = req.query.password;
         const database = req.query.database;

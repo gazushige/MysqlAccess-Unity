@@ -16,8 +16,8 @@ services:
     - ./docker/db/data:/var/lib/mysql
     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
     - ./docker/db/sql:/docker-entrypoint-initdb.d
-    ports:
-    - 3306:3306
+    expose: 
+    - "3306"
 
   # phpMyAdmin
   phpmyadmin:
